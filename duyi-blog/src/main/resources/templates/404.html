@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <!--移动端的预览设置，用于适配移动端-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="/Semantic-UI-CSS-master/semantic.min.css">
+    <link rel="stylesheet" href="/css/myblog.css">
+    <title>关于我</title>
+</head>
+<body>
+<!--导航-->
+<div th:replace="~{index::indexNav}"></div>
+
+<h1>404错误页面</h1>
+
+<!--底部footer-->
+<div th:replace="~{index::footer}"></div>
+
+
+<script src="/js/jquery-3.5.1.min.js"></script>
+<script src="/Semantic-UI-CSS-master/semantic.min.js"></script>
+<script>
+
+    $("#b1").click(function () {
+        $(".m-item").toggleClass("m-mobile-hide");
+    });
+
+    $('#wechat').popup({
+        popup: $('#wechat-qr'),
+        on: 'click',
+        position: 'bottom center'
+    })
+    $('#qq').popup({
+        popup: $('#qq-qr'),
+        on: 'click',
+        position: 'bottom center'
+    })
+</script>
+</body>
+</html>
