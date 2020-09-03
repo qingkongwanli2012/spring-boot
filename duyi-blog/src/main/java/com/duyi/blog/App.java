@@ -1,13 +1,16 @@
-package com.duyi;
+package com.duyi.blog;
 
+
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
 @SpringBootApplication
-public class DuyiBlogApplication {
+@MapperScan("com.duyi.blog.dao")
+public class App {
 
     public static void main(String[] args) {
-        SpringApplication.run(DuyiBlogApplication.class, args);
-    }
 
+        SpringApplication.run(App.class, args);
+
+    }
 }
